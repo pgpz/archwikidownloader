@@ -24,7 +24,7 @@ int main(void) {
   {
     fp = fopen(outfilename, "wb");
     if (fp == NULL) {
-      fprintf(stderr, "failed to read %s\n", outfilename);
+      fprintf(stderr, "failed to read %s D:\n", outfilename);
       return 1;
     }
     struct curl_slist *headers = NULL;
@@ -42,7 +42,7 @@ int main(void) {
     curl_easy_cleanup(curl);
     fclose(fp);
   } else {
-    fprintf(stderr, "failed to curl\n");
+    fprintf(stderr, "failed to curl D:\n");
     return 1;
   }
   char buffer[256];
@@ -57,7 +57,7 @@ int main(void) {
 
 
 
-    printf("saved to wiki.html in your directory(open it inside of a browser.)\n");
+    printf("saved to wiki.html in your directory(open it inside of browser/whatever u use to browse files, but make sure it accepts .html.)\n");
     return 0;
   }
 }
